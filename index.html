@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mario - Página Personal</title>
+    <title>Mario - Personal Page</title>
     <style>
         * {
             margin: 0;
@@ -170,11 +170,68 @@
             justify-content: center;
             font-size: 4rem;
             margin: 0 auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 50%;
         }
 
         .about-content {
             font-size: 1.1rem;
             color: var(--text-secondary);
+        }
+
+        .education-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .education-section h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .education-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .education-item h4 {
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item .education-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0.5rem;
+        }
+
+        .education-item li {
+            color: var(--text-secondary);
+            margin-bottom: 0.3rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .education-item li:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
         }
 
         /* Habilidades */
@@ -307,131 +364,119 @@
     <!-- Navegación -->
     <nav>
         <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre-mi">Sobre Mí</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#inicio">Home</a></li>
+            <li><a href="#sobre-mi">About Me</a></li>
+            <li><a href="#habilidades">Skills</a></li>
+            <li><a href="#proyectos">Projects</a></li>
+            <li><a href="#contacto">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <h1>¡Hola, soy Mario! 👋</h1>
-        <p class="subtitle">Desarrollador & Entusiasta de la Tecnología</p>
+        <h1>¡Hi, I'm Mario! 👋</h1>
+        <p class="subtitle">Student of Data Science at ITAM</p>
         <p class="description">
-            Bienvenido a mi espacio personal. Aquí comparto mis proyectos, experiencias y pasiones.
-            Siempre aprendiendo, siempre creando.
+            Welcome to my personal space. Here I share my projects, skills and passions.
+
         </p>
         <div>
-            <a href="#proyectos" class="cta-button">Ver Proyectos</a>
-            <a href="#contacto" class="cta-button">Contactar</a>
+            <a href="#proyectos" class="cta-button">View Projects</a>
+            <a href="#contacto" class="cta-button">Contact</a>
         </div>
     </section>
 
     <!-- Sobre Mí -->
     <section id="sobre-mi">
-        <h2>Sobre Mí</h2>
+        <h2>About Me</h2>
         <div class="about">
             <div class="about-image">
-                🚀
+                <img src="https://www.itam.mx/sites/default/files/logo-itam.png" alt="Logo ITAM" onerror="this.style.display='none'; this.parentElement.innerHTML='🎓';">
             </div>
             <div class="about-content">
                 <p>
-                    Soy un apasionado por la tecnología y el desarrollo. Me encanta crear soluciones
-                    innovadoras y aprender nuevas tecnologías constantemente.
+                    Data Science student at ITAM with a strong technical background and strategic mindset. Passionate about applying data analysis to solve complex problems, optimize processes, and support business decisions that generate measurable impact. Interested in roles that integrate technology, strategy, and consulting to create value in global organizations.
                 </p>
-                <p style="margin-top: 1rem;">
-                    Cuando no estoy programando, disfruto explorando nuevas herramientas, contribuyendo
-                    a proyectos open source, y compartiendo conocimiento con la comunidad.
-                </p>
-                <p style="margin-top: 1rem;">
-                    Creo en el poder de la tecnología para resolver problemas y mejorar la vida de las personas.
-                    Mi objetivo es seguir creciendo profesionalmente mientras construyo cosas increíbles.
-                </p>
+                
+                <div class="education-section">
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>Instituto Tecnológico Autónomo de México (ITAM) - Mexico City</h4>
+                        <div class="education-date">August 2023 - Present</div>
+                        <ul>
+                            <li>Bachelor's in Data Science</li>
+                            <li>Exchange program planned at Vrije Universiteit Amsterdam (Spring 2026)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Habilidades -->
     <section id="habilidades">
-        <h2>Habilidades</h2>
+        <h2>Technical Skills</h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <h3>💻 Desarrollo Web</h3>
-                <p>HTML, CSS, JavaScript, React</p>
+                <h3>💻 Programming Languages</h3>
+                <p>Python, R, SQL</p>
             </div>
             <div class="skill-card">
-                <h3>🔧 Backend</h3>
-                <p>Node.js, Python, APIs</p>
+                <h3>🗄️ Databases</h3>
+                <p>Relational (PostgreSQL) and non-relational (MongoDB, Cassandra)</p>
             </div>
             <div class="skill-card">
-                <h3>📱 Desarrollo Móvil</h3>
-                <p>React Native, Flutter</p>
+                <h3>🛠️ Tools</h3>
+                <p>Git/GitHub, Docker, Tableau</p>
             </div>
             <div class="skill-card">
-                <h3>🗄️ Bases de Datos</h3>
-                <p>SQL, MongoDB, Firebase</p>
+                <h3>🧠 Competencies</h3>
+                <p>Machine learning, artificial intelligence, data visualization, applied statistics, data analysis and communication</p>
             </div>
             <div class="skill-card">
-                <h3>☁️ Cloud & DevOps</h3>
-                <p>Git, GitHub, CI/CD</p>
-            </div>
-            <div class="skill-card">
-                <h3>🎨 Diseño</h3>
-                <p>UI/UX, Figma, Responsive</p>
+                <h3>🌐 Languages</h3>
+                <p>Spanish (native), English (C1)</p>
             </div>
         </div>
     </section>
 
     <!-- Proyectos -->
     <section id="proyectos">
-        <h2>Proyectos</h2>
+        <h2>Relevant Academic Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
-                <h3>Proyecto 1</h3>
+                <h3>NYC Crash Analysis</h3>
                 <p>
-                    Descripción de tu primer proyecto. Puedes hablar sobre las tecnologías
-                    utilizadas, los desafíos enfrentados y los resultados obtenidos.
+                    Designed a Fourth Normal Form database, developed SQL queries, and created visualizations to identify traffic accident patterns in New York City, enabling the detection of critical urban risk areas.
                 </p>
-                <a href="#" class="project-link">Ver proyecto →</a>
+                <a href="https://github.com/Mario200-crypto/Bases-de-Datos" class="project-link" target="_blank">View project →</a>
             </div>
             <div class="project-card">
-                <h3>Proyecto 2</h3>
+                <h3>Baseball Game and Run Simulation with AI</h3>
                 <p>
-                    Descripción de tu segundo proyecto. Comparte los aspectos más interesantes
-                    y lo que aprendiste durante el desarrollo.
+                    Developed a predictive model using Markov chains and Monte Carlo simulations to estimate team runs based on batter performance and opposing pitchers, providing insights to evaluate competitive strategies.
                 </p>
-                <a href="#" class="project-link">Ver proyecto →</a>
-            </div>
-            <div class="project-card">
-                <h3>Proyecto 3</h3>
-                <p>
-                    Descripción de tu tercer proyecto. Menciona las características principales
-                    y el impacto que tuvo.
-                </p>
-                <a href="#" class="project-link">Ver proyecto →</a>
+                <a href="https://github.com/Mario200-crypto/Baseball_IA" class="project-link" target="_blank">View project →</a>
             </div>
         </div>
     </section>
 
     <!-- Contacto -->
     <section id="contacto" class="contact">
-        <h2>Contacto</h2>
+        <h2>Contact</h2>
         <p style="color: var(--text-secondary); margin-bottom: 2rem;">
-            ¿Tienes alguna pregunta o quieres colaborar? ¡No dudes en contactarme!
+            Have any questions or want to collaborate? Don't hesitate to contact me!
         </p>
         <div class="contact-links">
             <a href="https://github.com/Mario200-crypto" class="contact-link" target="_blank">GitHub</a>
-            <a href="mailto:tu-email@ejemplo.com" class="contact-link">Email</a>
-            <a href="https://linkedin.com/in/tu-perfil" class="contact-link" target="_blank">LinkedIn</a>
-            <a href="https://twitter.com/tu-usuario" class="contact-link" target="_blank">Twitter</a>
+            <a href="mailto:mguill10@itam.mx" class="contact-link">Email</a>
+            <a href="https://www.linkedin.com/in/mario-guillen-7133a531b" class="contact-link" target="_blank">LinkedIn</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Mario. Hecho con ❤️ y mucho ☕</p>
+        <p>&copy; 2024 Mario.
     </footer>
 </body>
 </html>
