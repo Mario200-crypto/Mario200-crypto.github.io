@@ -302,6 +302,44 @@
             text-decoration: underline;
         }
 
+        /* Extracurricular Activities */
+        .extracurricular-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .activity-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .activity-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .activity-item h3 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .activity-item .activity-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            font-style: italic;
+        }
+
+        .activity-item p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
         /* Contacto */
         .contact {
             text-align: center;
@@ -368,6 +406,7 @@
             <li><a href="#sobre-mi">About Me</a></li>
             <li><a href="#habilidades">Skills</a></li>
             <li><a href="#proyectos">Projects</a></li>
+            <li><a href="#extracurricular">Activities</a></li>
             <li><a href="#contacto">Contact</a></li>
         </ul>
     </nav>
@@ -375,9 +414,8 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <h1>¡Hi, I'm Mario! 👋</h1>
-        <p class="subtitle">Student of Data Science at ITAM</p>
-        <p class="description">
-            Welcome to my personal space. Here I share my projects, skills and passions.
+        <p class="subtitle"> Welcome to my personal space. Here I share my projects, skills and passions.</p>
+           
 
         </p>
         <div>
@@ -457,6 +495,23 @@
                     Developed a predictive model using Markov chains and Monte Carlo simulations to estimate team runs based on batter performance and opposing pitchers, providing insights to evaluate competitive strategies.
                 </p>
                 <a href="https://github.com/Mario200-crypto/Baseball_IA" class="project-link" target="_blank">View project →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extracurricular Activities -->
+    <section id="extracurricular">
+        <h2>Extracurricular Activities</h2>
+        <div class="extracurricular-section">
+            <div class="activity-item">
+                <h3>President of the High School Talent Association</h3>
+                <div class="activity-date">2022-2023</div>
+                <p>Led student initiatives to promote music, arts and culture.</p>
+            </div>
+            <div class="activity-item">
+                <h3>Social Service</h3>
+                <div class="activity-date">2024-present</div>
+                <p>Volunteer science teacher for middle school students.</p>
             </div>
         </div>
     </section>
